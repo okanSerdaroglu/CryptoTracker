@@ -1,6 +1,11 @@
-package com.plcoding.cryptotracker.util
+package com.plcoding.cryptotracker.core.domain.util
 
 typealias DomainError = Error
+
+/**
+ * in true project structure a common util is not a good idea. Because, for example this util is only used in domain module
+ * means that this is domain util. Creating a util package under core and domain is a good idea for this case
+ */
 
 sealed interface Result<out D, out E: Error> {
     data class Success<out D>(val data: D): Result<D, Nothing>
