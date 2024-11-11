@@ -53,7 +53,7 @@ class CoinListViewModel(
 
     fun onAction(action:CoinListAction) {
         when(action) {
-            is CoinListAction.onCoinClick -> {
+            is CoinListAction.OnCoinClick -> {
 
             }
         }
